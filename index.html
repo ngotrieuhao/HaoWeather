@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" />
+    <script
+      src="https://kit.fontawesome.com/27d79cf26d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body class="winter">
+    <div id="weather">
+      <input type="text" class="weather__search" />
+      <div class="weather__content">
+        <h1 class="weather__capital">
+          <span class="weather__capital--city">Ha Noi</span>
+          <span>,</span>
+          <span class="weather__capital--country">VN</span>
+        </h1>
+
+        <div class="weather__content--time">12/24/2022, 3:25:16 PM</div>
+        <div class="weather__content--temperature">
+          <span class="temperature--value">23 <sup>o</sup>C</span>
+        </div>
+
+        <div class="weather__content--season">Clouds</div>
+        <div class="weather__content--details">
+          <!-- Eye -->
+          <div class="visibility">
+            <i class="fa-solid fa-eye"></i>
+            <span>1000m</span>
+          </div>
+          <!-- Wind -->
+
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span>1000m</span>
+          </div>
+          <!-- Humidity -->
+
+          <div class="humidity">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>1000m</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>
