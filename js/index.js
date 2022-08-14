@@ -79,7 +79,6 @@ async function changeWeatherUI(capitalSearch) {
 }
 search.addEventListener("keypress", function (e) {
   if (e.code == "Enter" || e.keyCode == "13") {
-    console.log(e.keyCode === 13);
     let capitalSearch = search.value.trim();
     // search.value = "";
     changeWeatherUI(capitalSearch);
