@@ -78,7 +78,7 @@ async function changeWeatherUI(capitalSearch) {
   }
 }
 search.addEventListener("keypress", function (e) {
-  if (e.code == "Enter") {
+  if (e.code == "Enter" || e.code == 13) {
     let capitalSearch = search.value.trim();
     // search.value = "";
     changeWeatherUI(capitalSearch);
