@@ -12,6 +12,7 @@ var body = document.querySelector("body");
 
 var icon = document.querySelector("#weather__icon");
 var degree = document.querySelector("#degrees");
+var snowfall = document.querySelector(".wrapp__snowflake");
 
 async function changeWeatherUI(capitalSearch) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${capitalSearch}&appid=d5a24b803a5b4f5cd78313d2004ae267`;
@@ -69,6 +70,7 @@ async function changeWeatherUI(capitalSearch) {
       if (hasIcon || "fa-sun" || "fa-cloud-sun" || "fa-cloud") {
         icon.classList.remove("fa-sun", "fa-cloud-sun", "fa-cloud");
         icon.classList.add("fa-snowflake");
+        snowfall.style.display = "block";
       } else {
         icon.classList.add("fa-solid");
       }

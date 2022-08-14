@@ -15,6 +15,7 @@ body {
 }
 
 #weather {
+  font-family: "Roboto", sans-serif;
   transition: all 0.5s ease-out;
   width: 350px;
   border-radius: 10px;
@@ -231,5 +232,120 @@ body {
   }
   .weather__content--details div span {
     font-size: 25px;
+  }
+}
+
+/* Tuyết rơi */
+
+.wrapp__snowflake {
+  display: none;
+}
+.snowflake {
+  color: lightgray;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+  /* Để  tuyết luôn rơi trên màn hình và không bị ảnh hưởng, set position fixed*/
+  position: fixed;
+  z-index: 999; /* cho chắc =)) */
+  /* tuyết cần rơi từ điểm bắt đầu nằm trên cái màn hình */
+  top: -10%;
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  animation-delay: 4s, 2s;
+}
+
+.snowflake:nth-of-type(4) {
+  right: 1%;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(5) {
+  right: 10%;
+  animation-delay: 1.5s, 1s;
+}
+.snowflake:nth-of-type(6) {
+  right: 20%;
+  animation-delay: 6.5s, 0.5s;
+}
+.snowflake:nth-of-type(7) {
+  right: 30%;
+  animation-delay: 2.5s, 2s;
+}
+
+.snowflake:nth-of-type(8) {
+  left: 40%;
+  animation-delay: 1.2s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 50%;
+  animation-delay: 3s, 1s;
+}
+.snowflake:nth-of-type(10) {
+  left: 55%;
+  animation-delay: 3.5s, 2.5s;
+}
+.snowflake:nth-of-type(11) {
+  left: 60%;
+  animation-delay: 4.5s, 2s;
+}
+
+.snowflake:nth-of-type(12) {
+  left: 0%;
+  animation-delay: 1.2s, 0s;
+}
+.snowflake:nth-of-type(13) {
+  right: 0%;
+  animation-delay: 5s, 1s;
+}
+.snowflake:nth-of-type(14) {
+  left: 3%;
+  animation-delay: 3.5s, 2.5s;
+}
+.snowflake:nth-of-type(15) {
+  right: 3%;
+  animation-delay: 4.5s, 2s;
+}
+
+.snowflake:nth-of-type(16) {
+  left: 15%;
+  animation-delay: 1.2s, 0s;
+}
+.snowflake:nth-of-type(17) {
+  right: 45%;
+  animation-delay: 3s, 1s;
+}
+.snowflake:nth-of-type(18) {
+  left: 35%;
+  animation-delay: 3.5s, 2.5s;
+}
+.snowflake:nth-of-type(19) {
+  right: 35%;
+  animation-delay: 4.5s, 2s;
+}
+
+.snowflake {
+  animation: snowflakes-fall 3s linear infinite;
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
   }
 }
