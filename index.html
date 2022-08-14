@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Website</title>
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" />
     <script
       src="https://kit.fontawesome.com/27d79cf26d.js"
@@ -19,6 +18,8 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body class="winter">
     <div id="weather">
@@ -32,7 +33,9 @@
 
         <div class="weather__content--time">12/24/2022, 3:25:16 PM</div>
         <div class="weather__content--temperature">
-          <span class="temperature--value">23 <sup>o</sup>C</span>
+          <i id="weather__icon" class="fa-solid"></i>
+          <span class="temperature--value">23 </span>
+          <sup id="degrees"></sup>
         </div>
 
         <div class="weather__content--season">Clouds</div>
@@ -51,7 +54,7 @@
           <!-- Humidity -->
 
           <div class="humidity">
-            <i class="fa-solid fa-cloud-sun"></i>
+            <i class="fa-solid fa-droplet"></i>
             <span>1000m</span>
           </div>
         </div>

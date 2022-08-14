@@ -62,7 +62,7 @@ body {
 .weather__search {
   width: 100%;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid lightgray;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 0 15px 0 15px;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
@@ -73,7 +73,7 @@ body {
 .weather__search:focus {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 15px 0 15px 0;
-  border: none;
+  border: 1px solid lightgray;
   outline: none;
 }
 
@@ -90,7 +90,12 @@ body {
 
 .weather__content--time {
   margin: 15px 0 20px 0;
-  font-size: 15px;
+  font-size: 18px;
+}
+
+.weather__content--time:hover {
+  cursor: default;
+  color: #000;
 }
 
 .weather__content--temperature {
@@ -104,9 +109,52 @@ body {
   padding: 20px;
 }
 
+.fa-sun {
+  color: #fffed3;
+  filter: drop-shadow(-8px -8px 8px rgb(237, 245, 12));
+  transition: 0.4s ease-out;
+}
+.fa-sun:hover {
+  filter: drop-shadow(0 0 8px rgb(249, 200, 40));
+}
+
+.fa-cloud {
+  color: #c9c9c9;
+  filter: drop-shadow(-8px -8px 8px #cc8042);
+  transition: 0.4s ease-out;
+}
+.fa-cloud:hover {
+  filter: drop-shadow(0 0 8px rgb(244, 209, 85));
+}
+
+.fa-snowflake {
+  color: #fff;
+  filter: drop-shadow(-8px -8px 8px lightgray);
+  transition: 0.4s ease-out;
+}
+.fa-snowflake:hover {
+  filter: drop-shadow(0 0 8px rgb(244, 209, 85));
+}
+
+.fa-cloud-sun {
+  color: #fbf4ed;
+  filter: drop-shadow(-8px -8px 8px rgb(255, 135, 0));
+  transition: 0.4s ease-out;
+}
+
+.fa-cloud-sun:hover {
+  filter: drop-shadow(0 0 8px rgb(244, 209, 85));
+}
+
+#degrees {
+  position: absolute;
+  transform: translate(-4px, -4px);
+  font-size: 35px;
+}
+
 .weather__content--season {
   margin: 1rem 0;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -130,4 +178,58 @@ body {
 .hide {
   visibility: hidden;
   opacity: 0;
+}
+
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+  #weather {
+    width: 280px;
+  }
+  .weather__capital--city {
+    font-size: 30px;
+  }
+  .weather__capital--country {
+    font-size: 26px;
+  }
+  .weather__content--temperature {
+    margin: 0 20px;
+    font-size: 50px;
+    padding: 15px;
+  }
+  .weather__content--season {
+    font-size: 26px;
+  }
+}
+
+/* TABLET (Ipad Air) */
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
+  #weather {
+    width: 80%;
+    height: 80%;
+  }
+  .weather__capital {
+    font-size: 52px;
+  }
+  .weather__content--time {
+    font-size: 30px;
+  }
+  .weather__content--temperature {
+    padding: 50px;
+    font-size: 7.5rem;
+  }
+  #degrees {
+    font-size: 65px;
+  }
+  .weather__content--season {
+    font-size: 4rem;
+  }
+  .weather__content--details {
+    justify-content: space-around;
+  }
+  .weather__content--details div i {
+    font-size: 35px;
+  }
+  .weather__content--details div span {
+    font-size: 25px;
+  }
 }
