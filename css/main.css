@@ -182,60 +182,6 @@ body {
   opacity: 0;
 }
 
-/* Mobile (Iphone) */
-@media only screen and (max-width: 46.1875rem) {
-  #weather {
-    width: 280px;
-  }
-  .weather__capital--city {
-    font-size: 30px;
-  }
-  .weather__capital--country {
-    font-size: 26px;
-  }
-  .weather__content--temperature {
-    margin: 0 20px;
-    font-size: 50px;
-    padding: 15px;
-  }
-  .weather__content--season {
-    font-size: 26px;
-  }
-}
-
-/* TABLET (Ipad Air) */
-@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
-  #weather {
-    width: 80%;
-    height: 80%;
-  }
-  .weather__capital {
-    font-size: 52px;
-  }
-  .weather__content--time {
-    font-size: 30px;
-  }
-  .weather__content--temperature {
-    padding: 50px;
-    font-size: 7.5rem;
-  }
-  #degrees {
-    font-size: 65px;
-  }
-  .weather__content--season {
-    font-size: 4rem;
-  }
-  .weather__content--details {
-    justify-content: space-around;
-  }
-  .weather__content--details div i {
-    font-size: 35px;
-  }
-  .weather__content--details div span {
-    font-size: 25px;
-  }
-}
-
 /* Tuyết rơi */
 
 .wrapp__snowflake {
@@ -458,13 +404,15 @@ body {
 .bird--four {
   animation-duration: 1.1s;
   animation-delay: -0.5s;
+  position: absolute;
+  top: -235px;
 }
 
 .bird--five {
   animation-duration: 1.5s;
   animation-delay: -0.5s;
   position: absolute;
-  top: 20rem;
+  top: 30rem;
 }
 
 .bird--six {
@@ -479,7 +427,7 @@ body {
   animation-delay: -1.5s;
 }
 .bird--eight {
-  animation-duration: 0.5s;
+  animation-duration: 1.5s;
   animation-delay: -0.5s;
   position: absolute;
   top: 15rem;
@@ -501,12 +449,14 @@ body {
 .bird--eleven {
   animation-duration: 3s;
   animation-delay: -1.5s;
+  transform: scale(1.2);
 }
 .bird--twelve {
   animation-duration: 0.5s;
   animation-delay: -0.5s;
   position: absolute;
   top: 40rem;
+  transform: scale(1.2);
 }
 
 .bird-container {
@@ -649,5 +599,91 @@ body {
 
   100% {
     transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
+
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+  #weather {
+    width: 280px;
+  }
+  .weather__capital--city {
+    font-size: 30px;
+  }
+  .weather__capital--country {
+    font-size: 26px;
+  }
+  .weather__content--temperature {
+    margin: 0 20px;
+    font-size: 50px;
+    padding: 15px;
+  }
+  .weather__content--season {
+    font-size: 26px;
+  }
+
+  /* Clouds */
+  .cloud1 {
+    max-width: 250px;
+  }
+  .cloud2 {
+    max-width: 400px;
+    bottom: 0;
+  }
+  .cloud3 {
+    max-width: 200px;
+  }
+  .cloud5 {
+    max-width: 200px;
+  }
+
+  /* Bird */
+  .bird--one {
+    transform: scale(1.2);
+    top: -190px;
+    position: absolute;
+  }
+
+  .bird--eight {
+    top: -220px;
+    position: absolute;
+  }
+
+  .bird-container--eight {
+    animation-duration: 15s;
+    animation-delay: 5.25s;
+  }
+}
+
+/* TABLET (Ipad Air) */
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
+  #weather {
+    width: 80%;
+    height: 80%;
+  }
+  .weather__capital {
+    font-size: 52px;
+  }
+  .weather__content--time {
+    font-size: 30px;
+  }
+  .weather__content--temperature {
+    padding: 50px;
+    font-size: 7.5rem;
+  }
+  #degrees {
+    font-size: 65px;
+  }
+  .weather__content--season {
+    font-size: 4rem;
+  }
+  .weather__content--details {
+    justify-content: space-around;
+  }
+  .weather__content--details div i {
+    font-size: 35px;
+  }
+  .weather__content--details div span {
+    font-size: 25px;
   }
 }
