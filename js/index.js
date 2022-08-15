@@ -13,6 +13,8 @@ var body = document.querySelector("body");
 var icon = document.querySelector("#weather__icon");
 var degree = document.querySelector("#degrees");
 var snowfall = document.querySelector(".wrapp__snowflake");
+var cloud = document.querySelector(".wrapp__cloud");
+var bird = document.querySelector(".wrapp__birds");
 
 async function changeWeatherUI(capitalSearch) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${capitalSearch}&appid=d5a24b803a5b4f5cd78313d2004ae267`;
@@ -37,6 +39,9 @@ async function changeWeatherUI(capitalSearch) {
     if (hasIcon || "fa-cloud-sun" || "fa-cloud" || "fa-snowflake") {
       icon.classList.remove("fa-cloud-sun", "fa-cloud", "fa-snowflake");
       icon.classList.add("fa-sun");
+      bird.style.display = "block";
+      cloud.style.display = "none";
+      snowfall.style.display = "none";
     } else {
       icon.classList.add("fa-solid");
     }
@@ -48,6 +53,9 @@ async function changeWeatherUI(capitalSearch) {
       if (hasIcon || "fa-sun" || "fa-cloud" || "fa-snowflake") {
         icon.classList.remove("fa-sun", "fa-cloud", "fa-snowflake");
         icon.classList.add("fa-cloud-sun");
+        bird.style.display = "none";
+        cloud.style.display = "block";
+        snowfall.style.display = "none";
       } else {
         icon.classList.add("fa-solid");
       }
@@ -59,6 +67,9 @@ async function changeWeatherUI(capitalSearch) {
       if (hasIcon || "fa-sun" || "fa-cloud-sun" || "fa-snowflake") {
         icon.classList.remove("fa-sun", "fa-cloud-sun", "fa-snowflake");
         icon.classList.add("fa-cloud");
+        bird.style.display = "none";
+        cloud.style.display = "block";
+        snowfall.style.display = "none";
       } else {
         icon.classList.add("fa-solid");
       }
@@ -70,7 +81,9 @@ async function changeWeatherUI(capitalSearch) {
       if (hasIcon || "fa-sun" || "fa-cloud-sun" || "fa-cloud") {
         icon.classList.remove("fa-sun", "fa-cloud-sun", "fa-cloud");
         icon.classList.add("fa-snowflake");
+        bird.style.display = "none";
         snowfall.style.display = "block";
+        cloud.style.display = "none";
       } else {
         icon.classList.add("fa-solid");
       }
